@@ -15,10 +15,15 @@ Python 표준 라이브러리로 만든 웹 서버를 Docker 컨테이너로 실
 Codyssey_code/
 
 ├── README.md
+
 ├── Dockerfile
+
 ├── src/
+
 │   └── server.py
+
 ├── tests/
+
 └── images/
 
 
