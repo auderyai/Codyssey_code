@@ -8,12 +8,19 @@
 
 Codyssey_code/
 ├── README.md
+
 ├── Dockerfile
+
 ├── src/
+
 │   └── server.py
+
 ├── tests/
+
 └── images/
+
     ├── 01_local_8080.png
+    
     └── 02_docker_ps.png
 
 ---
@@ -24,7 +31,7 @@ Codyssey_code/
 
 python src/server.py
 
-브라우저에서 http://localhost:8080 접속
+브라우저에서 [http://localhost:8080](images/01_local_8080.png) 접속
 
 ### 2. Docker 실행
 
@@ -37,8 +44,8 @@ docker run -d -p 8080:8080 codyssey-web:latest
 
 | 파일 | 설명 |
 |------|------|
-| 01_local_8080.png | 로컬 실행 화면 |
-| 02_docker_ps.png | Docker 실행 화면 |
+| [01_local_8080.png](images/01_local_8080.png) | 로컬 실행 화면 |
+| [02_docker_ps.png](images/02_docker_ps.png) | Docker 실행 화면 |
 
 ---
 
@@ -55,12 +62,12 @@ docker run -d -p 8080:8080 codyssey-web:latest
 
 ## ✅ 1주차 완료 항목
 
-- [x] Python 웹서버 작성 (server.py)
-- [x] Dockerfile 작성
-- [x] 로컬 실행 확인 (localhost:8080)
-- [x] Docker 이미지 빌드
-- [x] Docker 컨테이너 실행 확인
-- [x] 실행 화면 캡처 및 업로드
+- [x] [Python 웹서버 작성 (server.py)](src/server.py)
+- [x] [Dockerfile 작성](Dockerfile)
+- [x] [로컬 실행 확인 (localhost:8080)](images/01_local_8080.png)
+- [x] [Docker 이미지 빌드](Dockerfile)
+- [x] [Docker 컨테이너 실행 확인](images/02_docker_ps.png)
+- [x] [실행 화면 캡처 및 업로드](images/)
 
 ---
 
