@@ -1,33 +1,24 @@
-# 1주차 과제 - 웹 서버 컨테이너화
+# 🐳 Codyssey_code
 
-Python 표준 라이브러리로 만든 웹 서버를 Docker 컨테이너로 실행하는 1주차 과제입니다.
+> Python 웹서버 · Docker 컨테이너 빌드 및 실행 실습 기록
 
-## 개발 환경
+---
 
-- Windows 11
-- Python 3.11
-- Docker
-- Git / GitHub
-
-
-## 폴더 구조
+## 📁 저장소 구조
 
 Codyssey_code/
-
 ├── README.md
-
 ├── Dockerfile
-
 ├── src/
-
 │   └── server.py
-
 ├── tests/
-
 └── images/
+    ├── 01_local_8080.png
+    └── 02_docker_ps.png
 
+---
 
-## 실행 방법
+## 🖥️ 실행 방법
 
 ### 1. 로컬 실행
 
@@ -35,23 +26,44 @@ python src/server.py
 
 브라우저에서 http://localhost:8080 접속
 
-
 ### 2. Docker 실행
 
 docker build -t codyssey-web:latest .
-
 docker run -d -p 8080:8080 codyssey-web:latest
 
+---
 
-## 실행 화면
+## 📸 실행 화면
 
-[로컬 실행](images/01\_local\_8080.png)
+| 파일 | 설명 |
+|------|------|
+| 01_local_8080.png | 로컬 실행 화면 |
+| 02_docker_ps.png | Docker 실행 화면 |
 
-[Docker 실행](images/02\_docker\_ps.png)
+---
 
+## 🛠️ 개발 환경
 
+| 항목 | 내용 |
+|------|------|
+| OS | Windows 11 |
+| 언어 | Python 3.11 |
+| 컨테이너 | Docker |
+| 버전관리 | Git / GitHub |
 
-## 관련 저장소
+---
 
-- 문서 저장소: https://github.com/auderyai/Codyssey
+## ✅ 1주차 완료 항목
 
+- [x] Python 웹서버 작성 (server.py)
+- [x] Dockerfile 작성
+- [x] 로컬 실행 확인 (localhost:8080)
+- [x] Docker 이미지 빌드
+- [x] Docker 컨테이너 실행 확인
+- [x] 실행 화면 캡처 및 업로드
+
+---
+
+## 🔗 관련 저장소
+
+- [Codyssey (문서·로그)](https://github.com/auderyai/Codyssey)
