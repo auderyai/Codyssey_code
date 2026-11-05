@@ -13,38 +13,44 @@ Codyssey_code/
 
 ├── README.md
 
-├── Dockerfile 
+├── Dockerfile  
                         ← 커스텀 nginx 이미지용
 ├── .gitignore
 
 ├── site/
 
-│   └── index.html
+│   └── index.html 
                      ← nginx 서빙 HTML
 ├── src/
 
-│   └── server.py
-                      ← Python 웹서버
+│   └── server.py  
+                     ← Python 웹서버
 ├── tests/
 
 ├── images/
 
 │   ├── 01_local_8080.png
-             ← 로컬 실행 화면
-│   └── 02_docker_ps.png
+               ← 로컬 실행 화면
+│   └── 02_docker_ps.png 
                ← Docker 실행 화면
 └── reports/
 
-    └── docker-custom-image/
+    ├── docker-custom-image/
 
-        ├── README.md 
-                         ← 커스텀 이미지 실습 보고서
-        └── screenshots/
+    │   ├── README.md  
+                     ← 커스텀 이미지 실습 보고서
+    │   └── screenshots/
 
-            ├── build.png
-                          ← 이미지 빌드 화면
-            └── run.png 
-                           ← 컨테이너 실행 화면
+    │       ├── build.png  
+                 ← 이미지 빌드 화면
+    │       └── run.png 
+                    ← 컨테이너 실행 화면
+    └── docker-volume/
+
+        ├── README.md
+                           ← 볼륨 실습 보고서
+        └── volume-persistence.png 
+             ← 데이터 영속성 확인 화면
 ```
 
 ---
@@ -85,6 +91,7 @@ docker run -d -p 8081:80 my-custom-nginx
 | [02_docker_ps.png](images/02_docker_ps.png) | Docker 컨테이너 실행 확인 |
 | [build.png](reports/docker-custom-image/screenshots/build.png) | 커스텀 이미지 빌드 화면 |
 | [run.png](reports/docker-custom-image/screenshots/run.png) | 커스텀 컨테이너 실행 화면 |
+| [volume-persistence.png](reports/docker-volume/volume-persistence.png) | Docker 볼륨 데이터 영속성 확인 |
 
 ---
 
@@ -112,7 +119,10 @@ docker run -d -p 8081:80 my-custom-nginx
 - [x] [site/index.html 작성](site/index.html)
 - [x] [커스텀 이미지 빌드 (my-custom-nginx)](reports/docker-custom-image/screenshots/build.png)
 - [x] [커스텀 컨테이너 실행 확인](reports/docker-custom-image/screenshots/run.png)
-- [x] [실습 보고서 작성](reports/docker-custom-image/README.md)
+- [x] [실습 보고서 작성 (docker-custom-image)](reports/docker-custom-image/README.md)
+- [x] [Docker 볼륨 생성 및 마운트](reports/docker-volume/README.md)
+- [x] [볼륨 데이터 영속성 확인](reports/docker-volume/volume-persistence.png)
+- [x] [볼륨 실습 보고서 작성](reports/docker-volume/README.md)
 
 ---
 
