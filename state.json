@@ -1,0 +1,85 @@
+{
+  "quizzes": [
+    {
+      "question": "파이썬에서 주석을 작성할 때 사용하는 기호는?",
+      "choices": [
+        "//",
+        "/* */",
+        "#",
+        "--"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "파이썬 리스트에서 마지막 요소를 제거하고 반환하는 메서드는?",
+      "choices": [
+        "remove()",
+        "pop()",
+        "delete()",
+        "clear()"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "파이썬에서 정수형 타입을 나타내는 키워드는?",
+      "choices": [
+        "integer",
+        "int",
+        "num",
+        "digit"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "파이썬에서 아무것도 반환하지 않는 함수의 반환값은?",
+      "choices": [
+        "0",
+        "False",
+        "None",
+        "Null"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "파이썬 딕셔너리에서 키 목록을 가져오는 메서드는?",
+      "choices": [
+        "values()",
+        "items()",
+        "keys()",
+        "get()"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "파이썬에서 클래스를 정의할 때 사용하는 키워드는?",
+      "choices": [
+        "def",
+        "class",
+        "struct",
+        "object"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "파이썬 for 루프에서 1부터 5까지 반복할 때 올바른 range는?",
+      "choices": [
+        "range(1,5)",
+        "range(1,6)",
+        "range(0,5)",
+        "range(5)"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "미국의 수도",
+      "choices": [
+        "서울",
+        "파리",
+        "위싱턴",
+        "평양"
+      ],
+      "answer": 3
+    }
+  ],
+  "best_score": 3
+}
