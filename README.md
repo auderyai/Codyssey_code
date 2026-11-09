@@ -5,14 +5,23 @@
 ## 📁 프로젝트 구조
 
 python-quiz-project/
-├── main.py              # 프로그램 진입점
+
+├── main.py # 프로그램 진입점
+
 ├── quiz_pkg/
-│   ├── __init__.py      # 패키지 초기화
-│   ├── quiz.py          # Quiz 클래스 정의
-│   └── game.py          # QuizGame 클래스 (게임 로직)
-├── state.json           # 퀴즈 및 점수 저장 파일
+
+│   ├── __init__.py # 패키지 초기화
+
+│   ├── quiz.py # Quiz 클래스 정의
+
+│   └── game.py # QuizGame 클래스 (게임 로직)
+
+├── state.json # 퀴즈 및 점수 저장 파일
+
 ├── .gitignore
+
 └── README.md
+
 
 ## ⚙️ 실행 방법
 
