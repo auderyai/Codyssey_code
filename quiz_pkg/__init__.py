@@ -1,3 +1,2 @@
-# quiz_pkg/__init__.py
-
-from quiz_pkg.game import run_quiz
+from quiz_pkg.game import QuizGame
+from quiz_pkg.quiz import Quiz
