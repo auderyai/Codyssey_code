@@ -1,25 +1,41 @@
-# quiz_pkg/quiz.py
+class Quiz:
+    """개별 퀴즈를 표현하는 클래스"""
 
-def get_quiz_data():
-    """
-    퀴즈 문제와 정답 데이터를 반환합니다.
-    리스트 내에 딕셔너리 형태로 저장하여 확장성을 고려했습니다.
-    """
-    questions = [
-        {
-            "question": "파이썬에서 리스트에 요소를 추가하는 메서드는?",
-            "options": ["1. append()", "2. add()", "3. insert_end()", "4. push()"],
-            "answer": 1
-        },
-        {
-            "question": "파이썬의 창시자는 누구일까요?",
-            "options": ["1. 제임스 고슬링", "2. 귀도 반 로섬", "3. 데니스 리치", "4. 빌 게이츠"],
-            "answer": 2
-        },
-        {
-            "question": "다음 중 파이썬의 기본 자료형이 아닌 것은?",
-            "options": ["1. int", "2. str", "3. float", "4. array"],
-            "answer": 4
+    def __init__(self, question, choices, answer):
+        """
+        question : 질문 문자열
+        choices  : 선택지 리스트 (4개)
+        answer   : 정답 번호 (1~4 정수)
+        """
+        self.question = question
+        self.choices  = choices
+        self.answer   = answer
+
+    # ── 변환 ──────────────────────────────────────────
+
+    def to_dict(self):
+        """JSON 저장용 딕셔너리 변환"""
+        return {
+            "question": self.question,
+            "choices" : self.choices,
+            "answer"  : self.answer
         }
-    ]
-    return questions
+
+    @staticmethod
+    def from_dict(data):
+        """딕셔너리 → Quiz 객체"""
+        return Quiz(data["question"], data["choices"], data["answer"])
+
+    # ── 출력 ──────────────────────────────────────────
+
+    def display(self, index):
+        """문제와 선택지 출력"""
+        print(f"\n[문제 {index}] {self.question}")
+        for i, choice in enumerate(self.choices, 1):
+            print(f"  {i}. {choice}")
+
+    # ── 정답 확인 ─────────────────────────────────────
+
+    def check_answer(self, user_answer):
+        """정답이면 True, 오답이면 False"""
+        return user_answer == self.answer
