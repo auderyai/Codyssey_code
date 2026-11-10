@@ -511,6 +511,20 @@ def load_state(self):
         self.best_score = 0
         self.save_state()
 ```
+## 📸 증빙자료
+
+### 🖥️ 프로그램 실행 증빙
+
+| 번호 | 설명 | 이미지 |
+|------|------|--------|
+| 1 | 프로그램 실행 — 메인 메뉴 | ![run-1](docs/screenshots/run-1.png) |
+| 2 | 퀴즈 풀기 진행 | ![run-2](docs/screenshots/run-2.png) |
+| 3 | 퀴즈 풀기 결과 | ![run-3](docs/screenshots/run-3.png) |
+| 4 | 퀴즈 추가 기능 | ![run-4](docs/screenshots/run-4.png) |
+| 5 | 퀴즈 목록 확인 | ![run-5](docs/screenshots/run-5.png) |
+| 6 | 점수 확인 | ![run-6](docs/screenshots/run-6.png) |
+| 7 | 예외 처리 동작 | ![run-7](docs/screenshots/run-7.png) |
+| 8 | 프로그램 종료 | ![run-8](docs/screenshots/run-8.png) |
 
 ## 📝 Git 커밋 이력
 
@@ -553,6 +567,46 @@ def load_state(self):
 | `main` | 최종 안정 버전 |
 | `feature/add-quiz` | 퀴즈 추가 기능 개발 |
 | `feature/save-load` | 저장/불러오기 기능 개발 |
+
+
+### 🌿 Git 작업 증빙
+
+#### 환경 설정 및 편집기
+
+| 설명 | 이미지 |
+|------|--------|
+| 개발 환경 설정 (git config 등) | ![env-config](docs/screenshots/env-config.png) |
+| VSCode 편집기 화면 | ![vscode-editor](docs/screenshots/vscode-editor.png) |
+
+---
+
+#### Clone · Pull
+
+| 설명 | 이미지 |
+|------|--------|
+| `git clone` 실행 결과 | ![git-clone](docs/screenshots/git-clone.png) |
+| `git pull` 실행 결과 | ![git-pull](docs/screenshots/git-pull.png) |
+
+---
+
+#### Commit 이력
+
+| 설명 | 이미지 |
+|------|--------|
+| `git log` 커밋 이력 | ![git-log](docs/screenshots/git-log-screenshot.png) |
+| `git log --oneline` 결과 | ![oneline-log](docs/screenshots/oneline-log.png) |
+| `git log --oneline --graph` 결과 | ![oneline-graph-log](docs/screenshots/onelinegrahp-log.png) |
+| 커밋 상세 이력 | ![commit-log](docs/screenshots/commit-log.png) |
+
+---
+
+#### Branch · Merge
+
+| 설명 | 이미지 |
+|------|--------|
+| 브랜치 생성 및 병합 로그 | ![branch-merge-log](docs/screenshots/brench-merge-log.png) |
+| 브랜치 푸시 로그 | ![branch-push-log](docs/screenshots/brench-push-log.png) |
+| 병합(merge) 결과 | ![merge-log](docs/screenshots/merge-log.png) |
 
 ---
 
