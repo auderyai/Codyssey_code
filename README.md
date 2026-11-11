@@ -610,6 +610,151 @@ def load_state(self):
 
 ---
 
+# GitHub 팀 협업 가이드 🚀
+
+## 📌 개요
+하나의 레포지토리에서 여러 개발자가 브랜치를 나누어 작업하고,
+최고관리자가 검토 후 승인된 코드만 main 브랜치에 반영하는 협업 구조입니다.
+
+---
+
+## 🏗️ 전체 구조
+GitHub (하나의 레포지토리)
+──────────────────────────────────────────────
+main 브랜치 (최고관리자 관리) 👑
+
+             │
+
+    ┌────────┼───────┐
+
+    │        │       │
+
+feature/  feature/  feature/
+
+홍길동      김철수     이영희
+
+(개발자1) (개발자2) (개발자3)
+
+code
+📋 복사
+
+---
+
+## 👥 역할 분담
+
+### 최고관리자 (Admin) 👑
+- main 브랜치 보호 설정
+- 개발자 코드 검토 (Pull Request 승인/거절)
+- main 브랜치에 최종 merge
+
+### 개발자 (Developer) 👨‍💻
+- 자기 브랜치에서 작업
+- GitHub에 push
+- Pull Request 요청 (검토 요청)
+
+---
+
+## 🔄 실제 작업 흐름
+
+### 개발자 작업 순서
+
+#### 1. 브랜치 생성
+```bash
+git checkout -b feature/홍길동
+2. 코드 작업
+bash
+
+# 개발 진행...
+3. commit
+bash
+
+git add .
+git commit -m "로그인 기능 추가"
+4. GitHub에 push
+bash
+
+git push origin feature/홍길동
+5. Pull Request 생성
+GitHub 사이트에서 Pull Request 생성
+최고관리자에게 검토 요청
+최고관리자 작업 순서
+6. 코드 검토
+Pull Request 내용 확인
+댓글/수정 요청 가능
+7. 승인 또는 거절
+✅ 승인 → main에 merge
+❌ 거절 → 개발자가 수정 후 재요청
+🔒 main 브랜치 보호 설정
+code
+
+GitHub 사이트에서 설정:
+
+레포지토리 → Settings → Branches
+→ Branch protection rules → Add rule
+→ Branch name pattern: main
+체크할 항목
+항목	설명
+☑ Require a pull request before merging	반드시 PR을 통해서만 merge 가능
+☑ Require approvals	승인자 최소 1명 이상 필요
+☑ Do not allow bypassing the above settings	관리자도 규칙 적용
+⚠️ 설정 후 개발자는 main에 직접 push 불가능!
+반드시 PR → 승인 → merge 순서로만 가능!
+
+Pull Request (PR) 이란?
+code
+
+Pull Request = "내 코드 검토해주세요!" 요청
+
+개발자 ──── PR 생성 ────▶ 최고관리자
+                          └── 코드 리뷰
+                          └── 댓글/수정 요청
+                          └── 승인 or 거절
+
+승인되면 → main에 merge ✅
+거절되면 → 개발자가 수정 후 재요청 🔄
+⏱️ 전체 흐름 타임라인
+code
+
+시간 흐름 ──────────────────────────────────────────▶
+
+main    ──────────────────────────────── merge! ──▶
+                                            ↑
+홍길동  ── 작업 ── commit ── push ── PR ── 승인
+김철수  ──── 작업 ──── commit ── push ── PR ── (대기중)
+이영희  ────── 작업 ────── commit ── push ── PR ── (검토중)
+📝 핵심 명령어 정리
+명령어	설명
+git checkout -b 브랜치명	새 브랜치 생성 및 이동
+git add .	변경 파일 전체 스테이징
+git commit -m "메시지"	커밋 (로컬 저장)
+git push origin 브랜치명	GitHub에 업로드
+git pull origin main	main 최신 내용 가져오기
+🔑 핵심 개념 요약
+개념	설명
+Branch	개발자별 작업 공간 🏗️
+Push	GitHub에 업로드 ☁️
+Pull Request	검토 요청 📋
+Merge	최종 합치기 ✅
+💡 참고
+이 협업 방식을 "Git Flow" 라고 합니다.
+실제 회사에서 사용하는 실무 표준 협업 방식입니다! 🏢
+
+code
+
+
+---
+
+## 📁 파일 저장 방법
+
+```bash
+# 1. README.md 파일 생성 (VS Code에서 열기)
+# 2. 위 내용 붙여넣기
+# 3. 저장 후 commit!
+
+git add README.md
+git commit -m "README.md 팀 협업 가이드 추가"
+git push origin main
+
 ## 📋 기본 제공 퀴즈 목록
 
 | # | 주제 |
